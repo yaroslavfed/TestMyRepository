@@ -2,19 +2,19 @@
 {
     internal class Program
     {
-        private static void func(ref int z, int x, int y)
+        private static int func(int x, int y)
         {
-            z = (int)Math.Pow(x, y);
+            int z = (int)Math.Pow(x, y);
+            return z;
         }
 
         static void Main(string[] args)
         {
-            int z = 0;
             Console.WriteLine("Hello, World!");
             int a = int.Parse(Console.ReadLine());
             int b = int.Parse(Console.ReadLine());
-            func(ref z, a, b);
-            Console.WriteLine(z);
+            int res = func(a, b);
+            Console.WriteLine(res);
         }
     }
 }
